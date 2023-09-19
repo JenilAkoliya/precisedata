@@ -1,0 +1,1273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Precise data | Datasets</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="icon">
+    <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+<style>
+    #hover-item:hover {
+        color: #37517e;
+        transform: scale(1.1);
+        transition: transform .2s;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+    span {
+        color: red;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+
+    h2 {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        h4 {
+            font-size: 18px;
+        }
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    @media (min-width: 768px) {
+        h3 {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    /***************************/
+    /* CODEPEN CSS - NO NEED ***/
+    /***************************/
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+    :root {
+        --ff-sans: 'Nunito Sans', sans-serif;
+        --fs-400: 16px;
+        --color-text: #000000;
+        --color-accent: #000000;
+        --color-border: #DDDDDD;
+        --transform-arrow-down: rotate(-180deg);
+        --trans: all 250ms ease-in-out;
+    }
+
+    body {}
+
+    button {
+        all: unset;
+    }
+
+    .cp_wrapper {
+        width: 90%;
+        margin-inline: auto;
+        padding: 40px;
+        background-color: #edf1f6;
+        border-radius: 10px;
+    }
+
+
+    /***************************/
+    /* TABS ********************/
+    /***************************/
+
+    .tabs-controls {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--gap-400, 16px);
+
+    }
+
+    .tabs-control {
+        font-size: 12px;
+        width: 100%;
+        position: relative;
+        padding: var(--gap-200, 4px);
+        font-family: var(--ff-sans);
+        font-weight: 300;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border, #DDDDDD);
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .tabs-control {
+            width: 100%;
+            position: relative;
+            padding: var(--gap-200, 8px);
+            font-family: var(--ff-sans);
+            font-size: var(--fs-400, 18px);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border, #DDDDDD);
+            cursor: pointer;
+
+        }
+    }
+
+    .tabs-control[aria-selected="false"]:before,
+    .tabs-control[aria-selected="true"]:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        background-color: var(--color-accent);
+        transition: var(--trans);
+
+    }
+
+    .tabs-control[aria-selected="true"]:before {
+        height: 3px;
+    }
+
+    .tabs-panel[aria-selected="false"] {
+        display: none;
+    }
+
+    .tabs-panel[aria-selected="true"] {
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <img src="{% static 'img/logo/precise-logo-transparent.png' %}" alt="" class="img-fluid" height="6%" width="8%">
+      <h1 class="logo me-auto"><a href="#about">Precise data</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#services">Services</a></li>
+          <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li> -->
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#team">Team</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+          <!-- <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="/getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <!------------------------------------------------------------------------------------------------------------->
+                <h3 style="text-align:center;color: azure;"></h3>
+                <div class="col mt-5" data-aos="zoom-in">
+                    <h1>Complete and accurate datasets, ready to use.</h1>
+                    <p style="color: azure;">
+                        Access structured public web data for any use case. Subscribe to get a data feed of new records
+                        or filter existing datasets for a cost-effective and time-saving solution.
+                    </p>
+                </div>
+
+                <div class="col" data-aos="zoom-in">
+                    <img src="{% static 'img/datasets/datasetmain.svg' %}" alt="">
+                </div>
+
+
+            </div>
+            <!-----------------------row1 end-------------------------------------------------------------------------------------->
+
+        </div><!---container end-->
+
+    </section><!-- End Hero -->
+
+    <section><!------section 2 started---------------------------->
+        <div class="container ">
+            <div class="row" data-aos="fade-up" data-aos-delay="200"><!----row 2 start--------------->
+                <div class="section-title">
+                    <h1 class="text-center"
+                        style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">Popular Datasets</h2>
+                    <p style="color: rgb(138, 140, 142);">
+                        Samples are available for selected datasets only.
+                        Price starts from $0.001 per record.
+                    </p>
+                </div>
+            </div><!---------------row 2 end  ---------------->
+        </div><!---------------container end  ---------------->
+
+
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="cp_wrapper">
+                <div class="tabs">
+                    <div class="tabs-controls">
+                        <button type="button" class="tabs-control" aria-selected="true"
+                            aria-controls="tabs-all">All</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-business">Business</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-socialmedia">Social media</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-ecommerce">E-commerce</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-realestate">Real Estate</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-finance">Finance</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-education">Education</button>
+                    </div>
+
+
+                    <div class="tabs-panels">
+                        <!-- all -->
+
+                        <div class="tabs-panel" id="tabs-all" aria-selected="true" data-action="all">
+                            <div class="tab-content">
+                                <div class="row"><!-----row start ------>
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">LinkedIn Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Indeed Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Twitter Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------>
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Instagram Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Facebook Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Maps Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Commercial Real Estate Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Justdial Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Naukri Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IndiaMart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">No broker Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IMDB Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Crime Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo Finance Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Procurement notices Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Government info Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Reddit info Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">policybazaar Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+                        <!---------------------------------------------------Business-------------------------------------------------------------------------------->
+
+                        <!-- Business -->
+                        <div class="tabs-panel" id="tabs-business" aria-selected="false" data-action="business">
+                            <div class="tab-content">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IndiaMart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Justdial Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Procurement notices Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">LinkedIn Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Indeed Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Maps Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Naukri Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Goverment info Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo finance Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">PolicyBazaar Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Gambling app Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------- social media---------------------------------------------------------------------- -->
+                        <div class="tabs-panel" id="tabs-socialmedia" aria-selected="false" data-action="socialmedia">
+                            <div class="tab-content">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Facebook Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Twitter Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Instagram Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Threads Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">TikTok Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Youtube Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Sentiment Analysis Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------------- E-commerce------------------------------------------------------------------- -->
+                        <div class="tabs-panel" id="tabs-ecommerce" aria-selected="false" data-action="ecommerce">
+                            <div class="tab-content">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Walmart Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Zara Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Any ecommerce-site Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!------------------------------------------- Real estate--------------------------------------------------------------------------------->
+                        <div class="tabs-panel" id="tabs-realestate" aria-selected="false" data-action="realestate">
+                            <div class="tab-content">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">No broker Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">99acres Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Airbnb Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Any Commercial Real Estate Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------- Finance----------------------------------------------------------------------->
+
+                        <div class="tabs-panel" id="tabs-finance" aria-selected="false" data-action="finance">
+                            <div class="tab-content">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo Finance Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Gambling app Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!--------------------------------------------------Education----------------------------------------------------------------------->
+
+                        <div class="tabs-panel" id="tabs-education" aria-selected="false" data-action="education">
+                            <div class="tab-content">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Geeksforgeeks Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Wikipedia Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Medium Datasets</h3>
+                                            <p>request dataset</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!----------------------------------------------------------------------------------------->
+                    </div><!------tab panels ------>
+
+
+                </div><!-----tabs----------->
+            </div><!-----cp_wrapper--------->
+
+        </div><!--------container end------------------>
+
+
+<!----------------------------row 4 start------------------------->
+
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="cp_wrapper">
+                <h1 class="text-center"
+                style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">
+                    We’ll provide the data while you focus on the rest</h2>
+
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'img/datasets/Easy-discovery.svg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Easy Discovery</h5>
+                                <p class="card-text">Tap into all data points available on a website, which can be very
+                                    challenging to discover when collecting yourself.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'img/datasets/accurate_and_complete-1.svg' %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Accurate and Complete</h5>
+                                <p class="card-text">Get fresh, precise, and complete datasets, covering millions of
+                                    pages and tens of millions of data points.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'img/datasets/Enriched-data.svg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Enriched Data</h5>
+                                <p class="card-text">Increase the value and usability of your dataset by integrating
+                                    multiple data sources to create
+                                    a enriched dataset.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'img/datasets/Leader-in-compliance.svg' %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Leaders in Compliance</h5>
+                                <p class="card-text">Precise data is fully committed to complying with all relevant data
+                                    protection legal requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-----------div closed------------------->
+
+
+
+            </div><!---------------cp_wrapper  closed------------>
+
+        </div><!---------------row 4 end  ---------------->
+
+
+        <div class="row mt-5"><!---------------row 5 starts  ---------------->
+            <div class="col" style="margin-left: 12%;" data-aos="fade-right" data-aos-delay="200">
+                <img src="{% static 'img/datasets/Various-Formats.svg' %}" alt="">
+            </div>
+
+            <div class="col" style="margin-right: 10%;margin-top: 4%;" data-aos="fade-left" data-aos-delay="200">
+                <h4 class="text-center">Various Formats</h4><br>
+                <p>Datasets in JSON, ndJSON, CSV, or Excel will be delivered to your preferred storage.
+                    </br> </br> </br>Delivery methods include: AWS, Google Drive, Google Cloud Storage, SFTP, and more!
+                </p>
+            </div>
+
+
+        </div><!---------------row 5 end  ---------------->
+
+
+
+        </div><!---------------container 2 end  ---------------->
+    </section><!------section 2 end------------------------>
+
+
+
+
+
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Become a Friend of the Precise data by signing up for our newsletter!</p>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input type="hidden" name="newsletter" class="form-control" required>
+              <input type="email" id="seeemail" name="email" placeholder="your email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+              <input onclick="sayhello2()" type="submit" value="Subscribe" required>
+              <h2 id="msg2"
+                style="color:#37517e ;font-family: Jost, sans-serif;font-size: 16px;font-weight: bold;text-transform: uppercase;">
+              </h2>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Precise data</h3>
+            <p>
+              A517 Blue-Rose,Borivali East<br>
+              Mumbai, MH 400066<br>
+              INDIA <br><br>
+              <strong>Phone:</strong> +91 8097024701<br>
+              <strong>Email:</strong> info@precisedata.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#hero">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#about">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#services">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Terms of service</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'template' %}">Pre-made Web Scraper</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'customizescraping' %}">Customize Web scraping</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'datasets' %}">Datasets</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'automation' %}">Web Automation</a></li>  
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'getstarted' %}">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Unlocking the Power of Connection: Explore and Engage with Our Social Networks</p>
+            <div class="social-links mt-3">
+              <a href="https://wa.me/918097024701?text=I%20want%20to%20know%20more%20about%20Precisedata%20services"
+                target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Precise data</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="">Precise data</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        init__tabs();
+
+        // Tabs
+        function init__tabs() {
+            let exist_tabs = document.querySelector('.tabs');
+
+            if (exist_tabs) {
+                let tabs_controlers = document.querySelectorAll('.tabs .tabs-control');
+                let tabs_panels = document.querySelectorAll('.tabs .tabs-panel');
+
+                tabs_controlers.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        dft_tab = e.target;
+                        dft_tab__aria_controls = dft_tab.getAttribute('aria-controls');
+
+                        // Reset Previous Active Tabs
+                        tab_prev_active = document.querySelector('.tabs-control[aria-selected="true"]')
+                        tab_prev_active.setAttribute('aria-selected', 'false')
+
+                        // Activate This Tab Controller
+                        dft_tab.setAttribute('aria-selected', 'true');
+
+                        // Reset Previous Active Panel
+                        panel_prev_active = document.querySelector('.tabs-panel[aria-selected="true"]');
+                        panel_prev_active.setAttribute('aria-selected', 'false');
+
+                        // Activate This Panel
+                        dft_panel = document.querySelector(`#${dft_tab__aria_controls}`);
+                        dft_panel.setAttribute('aria-selected', 'true');
+                    })
+                });
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>

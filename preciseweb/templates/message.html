@@ -1,0 +1,12 @@
+{% load static %}
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}"rel="stylesheet">
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-dismissible alert-success">
+      
+      <strong>{{message}}<strong>
+    </div>
+ {% endfor %}
+{% endif %}
+

@@ -1,0 +1,1695 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Precise data | Pre-made Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="icon">
+    <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9;
+        /* ie8 */
+    }
+
+
+    h1 {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+
+    h2 {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        h4 {
+            font-size: 18px;
+        }
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    @media (min-width: 768px) {
+        h3 {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 16px;
+        }
+    }
+
+
+    ul {
+        font-size: 10px;
+    }
+
+    @media (min-width: 768px) {
+        ul {
+            font-size: 16px;
+        }
+    }
+
+
+
+    /***************************/
+    /* CODEPEN CSS - NO NEED ***/
+    /***************************/
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+    :root {
+        --ff-sans: 'Nunito Sans', sans-serif;
+        --fs-400: 16px;
+        --color-text: #000000;
+        --color-accent: #000000;
+        --color-border: #DDDDDD;
+
+        --transform-arrow-down: rotate(-180deg);
+        --trans: all 250ms ease-in-out;
+    }
+
+    body {}
+
+    button {
+        all: unset;
+    }
+
+    .cp_wrapper {
+        width: 80%;
+        margin-inline: auto;
+        padding: 40px;
+        background-color: #e0e9f6;
+        border-radius: 10px;
+    }
+
+
+    /***************************/
+    /* TABS ********************/
+    /***************************/
+
+    .tabs-controls {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--gap-400, 16px);
+
+    }
+
+    .tabs-control {
+        font-size: 12px;
+        width: 100%;
+        position: relative;
+        padding: var(--gap-200, 4px);
+        font-family: var(--ff-sans);
+        font-weight: 300;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border, #DDDDDD);
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .tabs-control {
+            width: 100%;
+            position: relative;
+            padding: var(--gap-200, 8px);
+            font-family: var(--ff-sans);
+            font-size: var(--fs-400, 18px);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border, #DDDDDD);
+            cursor: pointer;
+
+        }
+    }
+
+    .tabs-control[aria-selected="false"]:before,
+    .tabs-control[aria-selected="true"]:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        background-color: var(--color-accent);
+        transition: var(--trans);
+
+    }
+
+    .tabs-control[aria-selected="true"]:before {
+        height: 3px;
+    }
+
+    .tabs-panel[aria-selected="false"] {
+        display: none;
+    }
+
+    .tabs-panel[aria-selected="true"] {
+        display: flex;
+    }
+</style>
+
+<style>
+    /***************************/
+    /* CODEPEN CSS - NO NEED ***/
+    /***************************/
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+    :root {
+        --ff-sans: 'Nunito Sans', sans-serif;
+        --fs-400: 16px;
+        --color-text: #000000;
+        --color-accent: #000000;
+        --color-border: #DDDDDD;
+
+        --transform-arrow-down: rotate(-180deg);
+        --trans: all 250ms ease-in-out;
+    }
+
+    body {}
+
+    button {
+        all: unset;
+    }
+
+    .cp_wrapper1 {
+        width: 90%;
+        margin-inline: auto;
+        padding: 40px;
+        background-color: #e0e9f6;
+        border-radius: 10px;
+    }
+
+
+    /***************************/
+    /* TABS ********************/
+    /***************************/
+
+    .tabs-controls1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--gap-400, 16px);
+
+    }
+
+    .tabs-control1 {
+        font-size: 12px;
+        width: 100%;
+        position: relative;
+        padding: var(--gap-200, 4px);
+        font-family: var(--ff-sans);
+        font-weight: 300;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border, #DDDDDD);
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .tabs-control1 {
+            width: 100%;
+            position: relative;
+            padding: var(--gap-200, 8px);
+            font-family: var(--ff-sans);
+            font-size: var(--fs-400, 18px);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border, #DDDDDD);
+            cursor: pointer;
+
+        }
+    }
+
+    .tabs-control1[aria-selected="false"]:before,
+    .tabs-control1[aria-selected="true"]:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        background-color: var(--color-accent);
+        transition: var(--trans);
+
+    }
+
+    .tabs-control1[aria-selected="true"]:before {
+        height: 3px;
+    }
+
+    .tabs-panel1[aria-selected="false"] {
+        display: none;
+    }
+
+    .tabs-panel1[aria-selected="true"] {
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+
+            <img src="{% static 'img/logo/precise-logo-transparent.png' %}" alt="" class="img-fluid" height="6%"
+                width="8%">
+            <h1 class="logo me-auto"><a href="#about">Precise data</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'index' %}#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'index' %}#services">Services</a></li>
+                    <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li> -->
+                    <li><a class="nav-link scrollto" href="{% url 'index' %}#team">Team</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+                    <!-- <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+                    <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="/getstarted">Get Started</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <!------------------------------------------------------------------------------------------------------------->
+                <h3 style="text-align:center;color: azure;"></h3>
+                <div class="col" data-aos="zoom-in">
+                    <h1>Pre made Web scraper templates</h1>
+                    <h4 style="color: azure;">
+                        Reduce your development time and resources by using our pre made web scraper
+                    </h4>
+
+
+                </div>
+
+                <div class="col" data-aos="zoom-in">
+                    <img style="margin-left: 15%;margin-top: -5%;"
+                        src="{% static 'img/template/web_scraper_hero.svg' %}" alt="">
+                </div>
+
+
+            </div>
+            <!-----------------------row1 end-------------------------------------------------------------------------------------->
+
+        </div><!---container end-->
+
+    </section><!-- End Hero -->
+
+    <section><!--------section 2 -------started------------>
+        <div class="container "><!----container 2 started--------->
+            <div class="row" data-aos="fade-up" data-aos-delay="200"><!----row 2 start--------------->
+                <div class="section-title">
+                    <h1 class="text-center"
+                        style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">
+                        Pre made Web scraper template Features
+                    </h1>
+                </div>
+            </div><!---------------row 2 end  ---------------->
+
+            <div class="row"><!----row 3 start--------------->
+
+                <div class="col" style="margin-left: -12%;" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/template/Captcha.svg' %}" alt="">
+                </div>
+
+
+                <div class="col" style="margin-top:7%;" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="text-center">Easily bypass CAPTCHAs and Blocks</h4>
+                    <p>Our hosted solution gives you maximum control and flexibility without maintaining proxy and
+                        unblocking infrastructure.
+                        </br> </br> </br>Easily scrape data from any geo-location while avoiding CAPTCHAs and blocks.
+                        </br> </br> </br>Rapid & automated Image Captcha solver
+                        </br> </br> </br>Scrape target sites consistently with automated IP address rotation
+                    </p>
+                </div>
+
+
+            </div><!---------------row 3 end  ---------------->
+
+
+
+            <div class="row mt-5"><!----row 4 start--------------->
+
+                <div class="col" style="margin-top: -10%;" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/template/inbuiltfunctions.svg' %}" alt="">
+                </div>
+
+                <div class="col" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="text-center">Use code templates and pre-built JavaScript functions</h4>
+                    <p>Reduce development time substantially by using ready-made JavaScript functions and code templates
+                        from major websites to build your web scrapers quickly and in scale.
+                        </br> </br> </br>Avoid development of the scraping code and just create an infrastructure to run
+                        our readymade scraping template.
+                        </br> </br> </br>Reduce a development cost and time.
+                    </p>
+                </div>
+
+
+            </div><!---------------row 4 end  ---------------->
+
+
+            <h1 class="text-center"
+                style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">
+                Designed for Any Use Case
+            </h1>
+            <div class="cp_wrapper">
+                <div class="tabs">
+                    <div class="tabs-controls">
+                        <button type="button" class="tabs-control" aria-selected="true"
+                            aria-controls="tabs-ecommerce">E-commerce</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-socialmedia">Socialmedia</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-business">Business</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-travel">Travel</button>
+                        <button type="button" class="tabs-control" aria-selected="false"
+                            aria-controls="tabs-realestate">Real-estate</button>
+                    </div>
+                    <div class="tabs-panels">
+
+                        <!-- ecommerce -->
+                        <div class="tabs-panel" id="tabs-ecommerce" aria-selected="true" data-action="ecommerce">
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col mt-5">
+                                        <h2>E-commerce website scraper</h2>
+                                        <ul>
+                                            <li>Configure dynamic pricing models</li><br>
+                                            <li>Identify matching products in real-time</li><br>
+                                            <li>Track changes in consumer demand</li><br>
+                                            <li>Anticipate the next big product trends</li><br>
+                                            <li>Get real-time alerts when new brands are introduced</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col ms-4">
+                                        <img src="{% static 'img/template/ecommerce_scraper_image.svg' %}" alt="">
+                                    </div>
+                                </div>
+
+                            </div><!------tab-content------>
+                        </div><!------tabs-panel------>
+
+                        <!-- socialmedia -->
+                        <div class="tabs-panel" id="tabs-socialmedia" aria-selected="false" data-action="socialmedia">
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col mt-5">
+                                        <h2>Social media website scraper</h2>
+                                        <ul>
+                                            <li>Scrape likes, posts, comments, hashtags, & videos</li><br>
+                                            <li>Discover influencers by # of followers, industry, and more</li><br>
+                                            <li>Spot shifts in popularity by monitoring likes, shares, ect.</li><br>
+                                            <li>Improve existing campaigns & create more effective ones</li><br>
+                                            <li>Analyze product reviews and consumer feedback</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col ms-4">
+                                        <img src="{% static 'img/template/social_scraper_image.svg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div><!------tab-content------>
+                        </div><!------tabs-panel------>
+
+                        <!-- business -->
+                        <div class="tabs-panel" id="tabs-business" aria-selected="false" data-action="business">
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col mt-5">
+                                        <h2>Business website scraper</h2>
+                                        <ul>
+                                            <li>Lead generation & jobs website scraper</li><br>
+                                            <li>Scrape public profiles to update your CRM</li><br>
+                                            <li>Identify key companies and employee movement</li><br>
+                                            <li>Evaluate company growth and industry trends</li><br>
+                                            <li>Analyze hiring patterns and in-demand skill sets</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col ms-4">
+                                        <img src="{% static 'img/template/business_scraper_image.svg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div><!------tab-content------>
+                        </div><!------tabs-panel------>
+
+                        <!-- travel -->
+                        <div class="tabs-panel" id="tabs-travel" aria-selected="false" data-action="travel">
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col mt-5">
+                                        <h2>Travel, hospitality & tourism website scraper</h2>
+                                        <ul>
+                                            <li>Compare prices of hotel & travel competitors</li><br>
+                                            <li>Set dynamic pricing models in real-time</li><br>
+                                            <li>Find your competitors new deals & promotions</li><br>
+                                            <li>Determine the right price for every travel promotion</li><br>
+                                            <li>Anticipate the next big travel trends</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col ms-4">
+                                        <img src="{% static 'img/template/travel_scraper_image.svg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div><!------tab-content------>
+                        </div><!------tabs-panel------>
+
+                        <!-- realestate -->
+                        <div class="tabs-panel" id="tabs-realestate" aria-selected="false" data-action="realestate">
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col mt-5">
+                                        <h2>Real estate website scraper</h2>
+                                        <ul>
+                                            <li>Compare properties pricing</li><br>
+                                            <li>Keep an updated database of property listings</li><br>
+                                            <li>Forecast sales and trends to improve ROI</li><br>
+                                            <li>Analyze negative and positive rental cycles of the market</li><br>
+                                            <li>Locate properties with the highest rental rates</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col ms-4">
+                                        <img src="{% static 'img/template/Real-estate_image.svg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div><!------tab-content------>
+                        </div><!------tabs-panel------>
+
+                    </div><!------tabs-panel--------->
+                </div><!------tabs--------->
+            </div><!------cd-wrapper--------------->
+
+
+        </div><!---------------container 2 end  ---------------->
+    </section><!---------------- section 2 end--------------------->
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section><!------section 3 started---------------------------->
+        <div class="container "><!------container 3 started---------------------------->
+            <div class="row" data-aos="fade-up" data-aos-delay="200"><!----row 2 start--------------->
+                <div class="section-title">
+                    <h1 class="text-center"
+                        style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">
+                        Popular ready made template codes
+                    </h1>
+                    <p style="color: rgb(138, 140, 142);">
+                    </p>
+                </div>
+            </div><!---------------row 2 end  ---------------->
+        </div><!---------------container 3 end  ---------------->
+
+
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <!------container 4 started---------------------------->
+            <div class="cp_wrapper1">
+                <div class="tabs1">
+                    <div class="tabs-controls1">
+                        <button type="button" class="tabs-control1" aria-selected="true"
+                            aria-controls="tabs-all_template">All</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-business_template">Business</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-socialmedia_template">Social media</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-ecommerce_template">E-commerce</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-realestate_template">Real Estate</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-finance_template">Finance</button>
+                        <button type="button" class="tabs-control1" aria-selected="false"
+                            aria-controls="tabs-education_template">Education</button>
+                    </div>
+
+
+                    <div class="tabs-panels1">
+                        <!-- all -->
+
+                        <div class="tabs-panel1" id="tabs-all_template" aria-selected="true" data-action="all_template">
+                            <div class="tab-content1">
+                                <div class="row"><!-----row start ------>
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">LinkedIn Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Indeed Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Twitter Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------>
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Instagram Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Facebook Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Maps Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Commercial Real Estate Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Justdial Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Naukri Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IndiaMart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">No broker Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IMDB Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Crime-info Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo Finance Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Procurement notices Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Government info Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Reddit info Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">policybazaar Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+                        <!---------------------------------------------------Business-------------------------------------------------------------------------------->
+
+                        <!-- Business -->
+                        <div class="tabs-panel1" id="tabs-business_template" aria-selected="false"
+                            data-action="business_template">
+                            <div class="tab-content1">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">IndiaMart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Justdial Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Procurement notices Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">LinkedIn Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Indeed Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Google Maps Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Naukri Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Goverment info Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo finance Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">PolicyBazaar Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Gambling app Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------- social media---------------------------------------------------------------------- -->
+                        <div class="tabs-panel1" id="tabs-socialmedia_template" aria-selected="false"
+                            data-action="socialmedia_template">
+                            <div class="tab-content1">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Facebook Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Twitter Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Matrimonial Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Instagram Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Threads Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">TikTok Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Youtube Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Sentiment Analysis Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------------- E-commerce------------------------------------------------------------------- -->
+                        <div class="tabs-panel1" id="tabs-ecommerce_template" aria-selected="false"
+                            data-action="ecommerce_template">
+                            <div class="tab-content1">
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Amazon Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Flipkart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Walmart Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Zara Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Myntra Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Ajio Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Misho Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Any ecommerce-site Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!------------------------------------------- Real estate--------------------------------------------------------------------------------->
+                        <div class="tabs-panel1" id="tabs-realestate_template" aria-selected="false"
+                            data-action="realestate_template">
+                            <div class="tab-content1">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">No broker Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">99acres Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Airbnb Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Any Commercial Real Estate Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!---------------------------------------------- Finance----------------------------------------------------------------------->
+
+                        <div class="tabs-panel1" id="tabs-finance_template" aria-selected="false"
+                            data-action="finance_template">
+                            <div class="tab-content1">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stock Market Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Moneycontrol Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Yahoo Finance Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Gambling app Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!--------------------------------------------------Education----------------------------------------------------------------------->
+
+                        <div class="tabs-panel1" id="tabs-education_template" aria-selected="false"
+                            data-action="education_template">
+                            <div class="tab-content1">
+
+                                <div class="row"><!------row start------->
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Stackoverflow Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Geeksforgeeks Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Wikipedia Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                    <div id="hover-item" style="text-align: center; color: #37517e;"
+                                        class="col me-2 ms-2 d-flex align-items-center justify-content-center shadow p-3 mb-5 bg-white rounded">
+                                        <a href="/getstarted">
+                                            <h3 style="color:#37517e;;">Medium Scraper</h3>
+                                            <p>request demo</p>
+                                        </a>
+                                    </div>
+
+                                </div><!----row end------>
+
+                            </div><!-----tab-content end-------->
+                        </div><!-----tab-panel end-------->
+
+
+                        <!----------------------------------------------------------------------------------------->
+                    </div><!------tab panels ------>
+
+
+                </div><!-----tabs----------->
+            </div><!-----cp_wrapper--------->
+
+
+
+        </div><!---------------container 4 end  ---------------->
+    </section><!------section 3 end------------------------>
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg" style="background-color: #e0e9f6;;">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h1 class="text-center"
+                    style="font-family:Jost;font-weight: bold;text-transform: uppercase;padding-bottom: 20px;position: relative;color: #37517e;">
+                    Frequently Asked Questions
+                </h1>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                            data-bs-target="#faq-list-1"> What is pre-made webscraper template? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-0" class="collapse show" data-bs-parent=".faq-list">
+                            <p>
+                                Pre-made web scraper template is ready to use code ,there is no need to hire a developer
+                                and wasting a time in creating
+                                the code.<br>Just insert and execute.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-2" class="collapsed">Where is the data stored? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                You can select your preferred delivery and storage method: API, Webhook, Amazon S3,
+                                Google Cloud,
+                                Google Cloud Pubsub, Microsoft Azure, or SFTP.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-3" class="collapsed">Why is it important to have an unblocking
+                            solution when scraping? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Having an unblocking solution when scraping is important because many websites have
+                                anti-scraping
+                                measures that block the scraper’s IP address or require CAPTCHA solving. The unblocking
+                                solution
+                                implemented within Precise Data’s script is designed to bypass these obstacles and
+                                continue gathering
+                                data without interruption.
+                            </p>
+                        </div>
+                    </li>
+
+
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-4" class="collapsed"> Is web scraping legal? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Many people have false impressions about web scraping. That is because it has been
+                                widely adopted to
+                                retrieve sensitive data regardless of terms of service. Web scraping itself is not
+                                illegal as it is
+                                just a process for collecting data more easily.
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-5" class="collapsed"> Can I scrape data behind a login page? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Yes, you can scrape data behind a login page easily if you have a functional account on
+                                the website.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-6" class="collapsed"> Is the service able to handle large-scale
+                            data? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Yes, as a web scraping service provider company, we are equipped to handle large-scale
+                                data. We have
+                                the infrastructure, resources, and expertise to efficiently extract and process vast
+                                amounts of data
+                                from websites. Our web scraping solutions are designed to handle diverse data
+                                requirements, whether it
+                                involves scraping thousands of web pages, crawling through extensive websites, or
+                                extracting
+                                information from massive datasets.
+                                We employ scalable and distributed systems to handle large volumes of data effectively.
+                                Our team of
+                                experts can develop customized scraping strategies, implement robust data extraction
+                                algorithms, and
+                                ensure the efficient storage and management of the scraped data.
+                                Additionally, we can provide data cleansing, normalization, and formatting services to
+                                ensure that the
+                                extracted data is accurate, reliable, and ready for analysis or integration into your
+                                systems. Our aim
+                                is to deliver high-quality and comprehensive datasets, tailored to meet your specific
+                                requirements,
+                                even when dealing with large-scale data.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                            data-bs-target="#faq-list-7" class="collapsed"> Where is the data stored? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Choose from JSON, XML, CSV, or Microsoft Excel.
+                            </p>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Become a Friend of the Precise data by signing up for our newsletter!</p>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="newsletter" class="form-control" required>
+                            <input type="email" id="seeemail" name="email" placeholder="your email"
+                                pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+                            <input onclick="sayhello2()" type="submit" value="Subscribe" required>
+                            <h2 id="msg2"
+                                style="color:#37517e ;font-family: Jost, sans-serif;font-size: 16px;font-weight: bold;text-transform: uppercase;">
+                            </h2>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Precise data</h3>
+                        <p>
+                            A517 Blue-Rose,Borivali East<br>
+                            Mumbai, MH 400066<br>
+                            INDIA <br><br>
+                            <strong>Phone:</strong> +91 8097024701<br>
+                            <strong>Email:</strong> info@precisedata.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#hero">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#about">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#services">Services</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Terms of
+                                    service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy
+                                    policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'template' %}">Pre-made Web
+                                    Scraper</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'customizescraping' %}">Customize
+                                    Web scraping</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'datasets' %}">Datasets</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'automation' %}">Web Automation</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'getstarted' %}">Web Development</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Social Networks</h4>
+                        <p>Unlocking the Power of Connection: Explore and Engage with Our Social Networks</p>
+                        <div class="social-links mt-3">
+                            <a href="https://wa.me/918097024701?text=I%20want%20to%20know%20more%20about%20Precisedata%20services"
+                                target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Precise data</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+
+                Designed by <a href="">Precise data</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        init__tabs();
+
+        // Tabs
+        function init__tabs() {
+            let exist_tabs = document.querySelector('.tabs');
+
+            if (exist_tabs) {
+                let tabs_controlers = document.querySelectorAll('.tabs .tabs-control');
+                let tabs_panels = document.querySelectorAll('.tabs .tabs-panel');
+
+                tabs_controlers.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        dft_tab = e.target;
+                        dft_tab__aria_controls = dft_tab.getAttribute('aria-controls');
+
+                        // Reset Previous Active Tabs
+                        tab_prev_active = document.querySelector('.tabs-control[aria-selected="true"]')
+                        tab_prev_active.setAttribute('aria-selected', 'false')
+
+                        // Activate This Tab Controller
+                        dft_tab.setAttribute('aria-selected', 'true');
+
+                        // Reset Previous Active Panel
+                        panel_prev_active = document.querySelector('.tabs-panel[aria-selected="true"]');
+                        panel_prev_active.setAttribute('aria-selected', 'false');
+
+                        // Activate This Panel
+                        dft_panel = document.querySelector(`#${dft_tab__aria_controls}`);
+                        dft_panel.setAttribute('aria-selected', 'true');
+                    })
+                });
+            }
+        }
+    </script>
+
+
+    <!----------------------------------template----------------------------------->
+    <script>
+        init__tabs();
+
+        // Tabs
+        function init__tabs() {
+            let exist_tabs = document.querySelector('.tabs1');
+
+            if (exist_tabs) {
+                let tabs_controlers = document.querySelectorAll('.tabs1 .tabs-control1');
+                let tabs_panels = document.querySelectorAll('.tabs1 .tabs-panel1');
+
+                tabs_controlers.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        dft_tab = e.target;
+                        dft_tab__aria_controls = dft_tab.getAttribute('aria-controls');
+
+                        // Reset Previous Active Tabs
+                        tab_prev_active = document.querySelector('.tabs-control1[aria-selected="true"]')
+                        tab_prev_active.setAttribute('aria-selected', 'false')
+
+                        // Activate This Tab Controller
+                        dft_tab.setAttribute('aria-selected', 'true');
+
+                        // Reset Previous Active Panel
+                        panel_prev_active = document.querySelector('.tabs-panel1[aria-selected="true"]');
+                        panel_prev_active.setAttribute('aria-selected', 'false');
+
+                        // Activate This Panel
+                        dft_panel = document.querySelector(`#${dft_tab__aria_controls}`);
+                        dft_panel.setAttribute('aria-selected', 'true');
+                    })
+                });
+            }
+        }
+    </script>
+
+
+</body>
+
+
+</html>

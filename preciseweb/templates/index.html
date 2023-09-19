@@ -1,0 +1,1114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Precise data | Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="icon">
+  <link href="{% static 'img/logo/precise-logo-transparent.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+
+</head>
+
+<style>
+  #hover-item:hover {
+    color: #37517e;
+    transform: scale(1.1);
+    transition: transform .2s;
+    cursor: pointer;
+  }
+
+
+  #usecases img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    /* ie8 */
+  }
+
+  #usecases a {
+    font-size: 10px;
+  }
+
+  @media (min-width: 768px) {
+    #usecases a {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      <img src="{% static 'img/logo/precise-logo-transparent.png' %}" alt="" class="img-fluid" height="6%" width="8%">
+      <h1 class="logo me-auto"><a href="#about">Precise data</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo/precisedatalogofinal.png' %}" alt="" class="img-fluid"></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+          <!-- <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+
+          <li><a class="getstarted scrollto" href="{% url 'getstarted' %}">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+  <!-- ======= Hero Section ======= -->
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+          <h1><span class="tagline"></span></h1>
+          <h2>One platform, multiple ways to get the data you need</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#services" class="btn-get-started scrollto">Get Started</a>
+            <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="static/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="static/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+
+    <!----------------------Uses in industry section-------------------->
+
+    <section id=usecases>
+
+      <div class="section-title" data-aos="fade-up" data-aos-delay="200">
+        <h2></h2>
+        <p>Popular use cases</p>
+      </div>
+
+      <div class="section-title" data-aos="fade-up" data-aos-delay="200">
+        <h2>Unlock a competitive advantage in <span>your industry</span></h2>
+      </div>
+
+
+      <div class="row ms-2 me-2" data-aos="fade-right" data-aos-delay="100">
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/ecommerce">
+            <img src="{% static 'img/uses_cases_icon/E_commerce.svg' %}" alt="">eCommerce
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/socialmedia">
+            <img src="{% static 'img/uses_cases_icon/Social_Media_for_Marketing.svg' %}" alt="">Social Marketing
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/seo">
+            <img src="{% static 'img/uses_cases_icon/Search_Engine_Results_Crawling.svg' %}" alt="">SERP & SEO
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/adtech">
+            <img src="{% static 'img/uses_cases_icon/Ad_Tech.svg' %}" alt="">Ad Tech
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/market">
+            <img src="{% static 'img/uses_cases_icon/Market_Research.svg' %}" alt="">Market Research
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row ms-2 me-2" data-aos="fade-left" data-aos-delay="100">
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/travel">
+            <img src="{% static 'img/uses_cases_icon/Travel.svg' %}" alt="">Travel
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/finance">
+            <img src="{% static 'img/uses_cases_icon/Financial_Services_Data.svg' %}" alt="">Financial Services
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/healthcare">
+            <img src="{% static 'img/uses_cases_icon/healthcare.svg' %}" alt="">Healthcare
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/realestate">
+            <img src="{% static 'img/uses_cases_icon/real_estate-1.svg' %}" alt="">Real Estate
+          </a>
+        </div>
+
+        <div id="hover-item"
+          class="col me-2 d-flex align-items-center justify-content-center shadow p-1 mb-5 bg-white rounded">
+          <a href="/good">
+            <img src="{% static 'img/uses_cases_icon/Data_for_Good_N.svg' %}" alt="">Data for Good
+          </a>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+    <!----------------------End of Uses in industry section-------------------->
+
+
+
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Everything you need from a web scraping solution</h2>
+        </div>
+
+        <div class="container d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+          <img src="static/img/Web-Scraper-IDE-How-it-Works-Diagram_dark-1.svg" class="img-fluid" alt="">
+        </div>
+
+      </div>
+
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Unlock a competitive advantage in your industry using our services</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="/template">Pre-made Web Scraper Templates</a></h4>
+              <p>Get started quickly and adapt existing code to your specific needs.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="/datasets">Datasets</a></h4>
+              <p>Browse available datasets for immediate download or get the latest snapshot of a desired website
+                scraped in real time.</br>eg: amazon datasets,justdial
+                datasets</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-lock-open"></i></div>
+              <h4><a href="/customizescraping">Customize Web Scraping</a></h4>
+              <p>Simply tell us the websites, job frequency, and your preferred storage. We'll handle the rest.
+                </br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="/automation">Business automation</a></h4>
+              <p>Automate daily tasks to save time & resources.
+                </br>Track websites to SKU level daily. Increase sales, optimize pricing and promotions, and
+                keep a competitive edge.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Can’t find what you’re searching for?</h3>
+            <p> Let us know what service you need and we’ll create it for you.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="{% url 'getstarted' %}">Call Back Request</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="static/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="static/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="static/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="static/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="static/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="static/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="static/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="static/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="static/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="static/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Portfolio Section -->
+
+
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Build web scrapers fast with our hosted cloud solution.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>PAY AS YOU GET</h3>
+              <h4><sup></sup><span>No commitment</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Pay per record that you recieved </li>
+                <li><i class="bx bx-check"></i> Support for various data formats (e.g., CSV, JSON, XML) for data
+                  extraction and export</li>
+                <li><i class="bx bx-check"></i> Ability to extract data from websites based on specified parameters
+                </li>
+                <li><i class="bx bx-check"></i> Regular or scheduled data extraction based on predefined intervals
+                  (e.g., daily, weekly)</li>
+                <!-- <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li> -->
+              </ul>
+              <a href="/getstarted" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>BUSINESS PLAN</h3>
+              <h4><sup>$</sup>1000<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Access to a robust web scraping platform or API with advanced features
+                </li>
+                <li><i class="bx bx-check"></i> Customization options for defining scraping rules and selecting data
+                  elements of interest </li>
+                <li><i class="bx bx-check"></i> Delivery of 100000 records per month</li>
+                <li><i class="bx bx-check"></i> Scalability and high concurrency for scraping large volumes of data or
+                  multiple websites simultaneously</li>
+                <li><i class="bx bx-check"></i> Dedicated support or account manager for business customers</li>
+              </ul>
+              <a href="/getstarted" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>ENTERPRISE</h3>
+              <h4><sup></sup><span>Get a quote</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Dedicated solution architect </li>
+                <li><i class="bx bx-check"></i> Premium SLA </li>
+                <li><i class="bx bx-check"></i> Seamless integration with existing systems, databases, or workflow </li>
+                <li><i class="bx bx-check"></i> Dedicated support or account manager specifically for enterprise
+                  customers</li>
+                <li><i class="bx bx-check"></i> Direct point of contact for personalized assistance, issue resolution,
+                  and strategic guidance </li>
+                <li><i class="bx bx-check"></i> Assistance with data transformation, cleaning, and enrichment to ensure
+                  data quality </li>
+                <li><i class="bx bx-check"></i> Flexible pricing and tailored plans based on enterprise-specific
+                  requirements </li>
+                <li><i class="bx bx-check"></i> Regular performance reviews, reporting, and optimization recommendations
+                </li>
+              </ul>
+              <a href="/getstarted" class="buy-btn">Get Started</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                data-bs-target="#faq-list-1">In what format is the data delivered?<i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Choose from JSON, XML, CSV, or Microsoft Excel.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                class="collapsed">Where is the data stored? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  You can select your preferred delivery and storage method: API, Webhook, Amazon S3, Google Cloud,
+                  Google Cloud Pubsub, Microsoft Azure, or SFTP.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                class="collapsed">Why is it important to have an unblocking solution when scraping? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Having an unblocking solution when scraping is important because many websites have anti-scraping
+                  measures that block the scraper’s IP address or require CAPTCHA solving. The unblocking solution
+                  implemented within Precise Data’s script is designed to bypass these obstacles and continue gathering
+                  data without interruption.
+                </p>
+              </div>
+            </li>
+
+
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
+                class="collapsed"> Is web scraping legal? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Many people have false impressions about web scraping. That is because it has been widely adopted to
+                  retrieve sensitive data regardless of terms of service. Web scraping itself is not illegal as it is
+                  just a process for collecting data more easily.
+                </p>
+              </div>
+            </li>
+
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
+                class="collapsed"> Can I scrape data behind a login page? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, you can scrape data behind a login page easily if you have a functional account on the website.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6"
+                class="collapsed"> Is the service able to handle large-scale data? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, as a web scraping service provider company, we are equipped to handle large-scale data. We have
+                  the infrastructure, resources, and expertise to efficiently extract and process vast amounts of data
+                  from websites. Our web scraping solutions are designed to handle diverse data requirements, whether it
+                  involves scraping thousands of web pages, crawling through extensive websites, or extracting
+                  information from massive datasets.
+                  We employ scalable and distributed systems to handle large volumes of data effectively. Our team of
+                  experts can develop customized scraping strategies, implement robust data extraction algorithms, and
+                  ensure the efficient storage and management of the scraped data.
+                  Additionally, we can provide data cleansing, normalization, and formatting services to ensure that the
+                  extracted data is accurate, reliable, and ready for analysis or integration into your systems. Our aim
+                  is to deliver high-quality and comprehensive datasets, tailored to meet your specific requirements,
+                  even when dealing with large-scale data.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>We’re here to support you, and get you the data you need. Fast.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A517 Blue-Rose,Borivali East, Mumbai, MH 400066</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@precisedata.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 8097024701</p>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4523261750146!2d72.86242740987213!3d19.219108847391045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b732f361dc25%3A0xdb427764a8b4c9d9!2sBlue%20Rose%20Ind.%20P.C.S%20Ltd!5e0!3m2!1sen!2sin!4v1684681544110!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+
+
+
+          <div id="contact" class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+
+            <form action="" method="post" role="form" enctype="multipart/form-data">
+
+              {% csrf_token %}
+              <input type="hidden" name="contact" class="form-control" required>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" id="seename" class="form-control" placeholder="John Smith"
+                    maxlength="50" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="johnsmith@company.com"
+                    maxlength="50" required>
+                </div>
+                <div class="form-group">
+                  <label for="Phone">Phone</label>
+                  <input type="tel" class="form-control" name="phone" placeholder="910123456789" maxlength="13"
+                    required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject" placeholder="What kinds of insights"
+                  maxlength="1000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" rows="10" placeholder="message" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Upload File</label>
+                <input type="file" class="form-control" name="file" placeholder="upload a file" maxlength="1000"
+                  required>
+              </div>
+
+              <!-- <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div> -->
+              <button onclick="sayhello()" type="submit" class=" mt-2 mb-2"
+                style="border:none;font-size:16px; background-color:#47b2e4;border-radius: 50px;color:#fff;padding: 10px 20px;">Send
+                Message</a></button>
+
+              <h2 id="msg"
+                style="color:#37517e ;font-family: Jost, sans-serif;font-size: 32px;font-weight: bold;text-transform: uppercase;">
+              </h2>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3><strong>Join our culture of getting things done</strong></h3>
+              <p>
+                Our customer-obsessed value-centric culture and our transparent company DNA can be summed up in three
+                words: ‘getting things DONE!’
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>
+                    Professionalism <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Which is why we only hire the most talented people in their field from around the world..
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
+                    Efficiency <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Which is why we provide our employees with the best equipment available.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                    Health <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Which is why we employ in-house chefs to make healthy and delicious meals on the daily.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a href="#contact" data-bs-target="#accordion-list-3" class="collapsed"
+                    style="text-align:center;"><span></span> Join
+                    us </a>
+                </li>
+
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+            style='background-image: url("static/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Jenil Akoliya</h4>
+                <span>Chief Executive Officer</span>
+                <p></p>
+                <div class="social">
+                  <a href="#team"><i class="ri-twitter-fill"></i></a>
+                  <a href="#team"><i class="ri-facebook-fill"></i></a>
+                  <a href="#team"><i class="ri-instagram-fill"></i></a>
+                  <a href="#team"> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Patricia Roger Sane </h4>
+                <span>Chief Technology and Strategy Officer</span>
+                <p></p>
+                <div class="social">
+                  <a href="#team"><i class="ri-twitter-fill"></i></a>
+                  <a href="#team"><i class="ri-facebook-fill"></i></a>
+                  <a href="#team"><i class="ri-instagram-fill"></i></a>
+                  <a href="#team"> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p></p>
+                <div class="social">
+                  <a href="#team"><i class="ri-twitter-fill"></i></a>
+                  <a href="#team"><i class="ri-facebook-fill"></i></a>
+                  <a href="#team"><i class="ri-instagram-fill"></i></a>
+                  <a href="#team"> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Project Manager</span>
+                <p></p>
+                <div class="social">
+                  <a href="#team"><i class="ri-twitter-fill"></i></a>
+                  <a href="#team"><i class="ri-facebook-fill"></i></a>
+                  <a href="#team"><i class="ri-instagram-fill"></i></a>
+                  <a href="#team"> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= About Us Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>About Precise Data</h2>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6">
+          <p>
+            Precise Data is the world’s Leading web data platform. Fortune 150 companies, academic institutions, and
+            small businesses all rely on Precise Data’s solutions to retrieve crucial public web data in the most
+            efficient, reliable, and flexible way. With web data, these companies can research, monitor, and analyze
+            data to make better decisions. We believe that making public web data easily accessible is essential to
+            keeping markets openly competitive, benefiting all of us.
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> Responsible data collection : Being ethical, legally compliant
+              (GDPR and CCPA), and safeguarding our network is a top priority for us. </li>
+            <li><i class="ri-check-double-line"></i> Data leadership : Our global team is driven by leading data
+              specialists providing 24/7 attuned care, support and innovation for our customers. </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <p>
+            Our platform is used worldwide by 1000+ customers in nearly every industry. Our users love us because we
+            provide them with a cost-effective way to perform fast and stable public web data collection at scale,
+            effortless conversion of unstructured data into structured data, and superior customer experience, while
+            being fully transparent and compliant.
+          </p>
+          <a href="#" class="btn-learn-more">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Become a Friend of the Precise data by signing up for our newsletter!</p>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input type="hidden" name="newsletter" class="form-control" required>
+              <input type="email" id="seeemail" name="email" placeholder="your email"
+                pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+              <input onclick="sayhello2()" type="submit" value="Subscribe" required>
+              <h2 id="msg2"
+                style="color:#37517e ;font-family: Jost, sans-serif;font-size: 16px;font-weight: bold;text-transform: uppercase;">
+              </h2>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Precise data</h3>
+            <p>
+              A517 Blue-Rose,Borivali East<br>
+              Mumbai, MH 400066<br>
+              INDIA <br><br>
+              <strong>Phone:</strong> +91 8097024701<br>
+              <strong>Email:</strong> info@precisedata.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'template' %}">Pre-made Web Scraper</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'customizescraping' %}">Customize Web scraping</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'datasets' %}">Datasets</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'automation' %}">Web Automation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'getstarted' %}">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Unlocking the Power of Connection: Explore and Engage with Our Social Networks</p>
+            <div class="social-links mt-3">
+              <a href="https://wa.me/918097024701?text=I%20want%20to%20know%20more%20about%20Precisedata%20services"
+                target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Precise data</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="">Precise data</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/JQuery and JQuery UI/js/jquery-3.6.0.min.js' %}"></script><!----core jquery file---->
+  <script src="{% static 'vendor/typed.js-master/lib/typed.min.js' %}"></script><!----typed js file-->
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+
+  <script>
+
+    function sayhello() {
+      var name = document.getElementById("seename").value;
+      document.getElementById("msg").innerText = name + "! your message has been recieved"
+
+    }
+
+  </script>
+
+
+  <script>
+
+    function sayhello2() {
+      var email = document.getElementById("seeemail").value;
+      document.getElementById("msg2").innerText = email + "! Congrats ! your are now friend of precise data"
+
+    }
+
+  </script>
+
+  <!-----------typed script------------->
+  <script>
+    $(function () {
+
+      var typed = new Typed('.tagline', {
+        strings: ["On Demand Webscraping For Your Business"],
+        typeSpeed: 40,
+        backspeed: 200,
+        loop: true,
+      })
+    });
+  </script>
+
+
+
+
+</body>
+
+
+
+</html>
