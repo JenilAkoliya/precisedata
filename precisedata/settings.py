@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'preciseweb'
-    # 'preciseweb.apps.precisewebConfig'
+    'preciseweb',
+    'preciseweb.apps.precisewebConfig'
 ]
 
 MIDDLEWARE = [
